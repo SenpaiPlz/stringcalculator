@@ -31,4 +31,22 @@ public class CalculatorTest {
 		assertEquals(8, Calculator.add("3,5"));
 		assertEquals(13, Calculator.add("5,8"));
 	}
+
+	@Test
+	public void testTwoInputWithNewlineSeperator() {
+		assertEquals(2, Calculator.add("1\n1"));
+		assertEquals(3, Calculator.add("1\n2"));
+		assertEquals(5, Calculator.add("2\n3"));
+		assertEquals(8, Calculator.add("3\n5"));
+		assertEquals(13, Calculator.add("5\n8"));
+	}
+
+	@Test
+	public void testMultipleInputsWithMixedSeperators() {
+		assertEquals(2, Calculator.add("1,2"));
+		assertEquals(6, Calculator.add("1,2\n3"));
+		assertEquals(5, Calculator.add("2,3"));
+		assertEquals(9, Calculator.add("1\n3,5"));
+		assertEquals(13, Calculator.add("5\n8"));
+	}
 }
