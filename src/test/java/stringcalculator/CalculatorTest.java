@@ -71,5 +71,11 @@ public class CalculatorTest {
 		thrown.expectMessage(is("Negatives not allowed: [-2, -3]"));
 		Calculator.add("-2,2,-3");
 	}
-		
+
+	@Test
+	public void testForMaxValues() {
+		assertEquals(13, Calculator.add("13,10001"));
+		assertEquals(0, Calculator.add("10001,10002"));
+
+	}
 }
