@@ -1,5 +1,4 @@
 #!/bin/bash
-./bin/clean
-./bin/compile
-./bin/compile_tests
-./bin/unit_test
+./bin/clean.sh
+./bin/compile.sh
+./bin/run.sh
