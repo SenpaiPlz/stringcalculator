@@ -18,7 +18,8 @@ public class Calculator {
 				negatives.add(tempint);
 			}
 			else
-				sum += tempint;
+				if(tempint <= 1000)
+					sum += tempint;
 		}
 		if(negatives.size() != 0) {
 			throw new IllegalArgumentException("Negatives not allowed: " + negatives);
