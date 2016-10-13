@@ -43,7 +43,7 @@ public class CalculatorTest {
 
 	@Test
 	public void testMultipleInputsWithMixedSeperators() {
-		assertEquals(2, Calculator.add("1,2"));
+		assertEquals(3, Calculator.add("1,2"));
 		assertEquals(6, Calculator.add("1,2\n3"));
 		assertEquals(5, Calculator.add("2,3"));
 		assertEquals(9, Calculator.add("1\n3,5"));
