@@ -61,14 +61,14 @@ public class CalculatorTest {
 	@Test
 	public void testSingleNegativeException() {
 		thrown.expect(IllegalArgumentException.class);
-		thrown.expectMessage(is("Negatives not allowed: -2"));
+		thrown.expectMessage(is("Negatives not allowed: [-2]"));
 		Calculator.add("-2");
 	}
 	
 	@Test
 	public void testMultipleNegativeException() {
 		thrown.expect(IllegalArgumentException.class);
-		thrown.expectMessage(is("Negatives not allowed: -2,-3"));
+		thrown.expectMessage(is("Negatives not allowed: [-2, -3]"));
 		Calculator.add("-2,2,-3");
 	}
 		
