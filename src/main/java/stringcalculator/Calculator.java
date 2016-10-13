@@ -8,8 +8,13 @@ public class Calculator {
 	public static int add(String in) {
 		if(in == "")
 			return 0;
-
-		String[] temp = in.split(",|\n");
+		
+		String delim = ",|\n";
+		if(in.matches("^(//.\n)(.)+$")) {
+			delim = Character.toString(in.charAt(2));
+			in = in.substring(4);
+		}
+		String[] temp = in.split(delim);
 		ArrayList<Integer> negatives = new ArrayList<Integer>();
 		int sum = 0;
 		for(int i = 0; i < temp.length; i++) {
